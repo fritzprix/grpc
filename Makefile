@@ -443,6 +443,9 @@ endif
 # additional required arguments for LD and AR (examples below)
 # Then you can do a make from the cross-compiling fresh clone!
 #
+
+-include cross_compile.mk
+
 ifeq ($(GRPC_CROSS_COMPILE),true)
 LDFLAGS += $(GRPC_CROSS_LDOPTS) # e.g. -L/usr/local/lib -L/usr/local/cross/lib
 AROPTS = $(GRPC_CROSS_AROPTS) # e.g., rc --target=elf32-little
